@@ -1,6 +1,13 @@
 use crate::prelude::*;
 
 #[system]
-pub fn player_input() {
-    
+#[write_component(Point)]
+#[read_component(Player)]
+pub fn player_input(
+    ecs: &mut SubWorld,
+    #[resource] map: &Map,
+    #[resource] key: &Option<VirtualKeyCode>,
+    #[resource] camera: &mut Camera
+) {
+
 }
